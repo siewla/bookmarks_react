@@ -12,6 +12,9 @@ const PORT = process.env.PORT;
 // Controllers
 const bookmarksController = require('./controllers/bookmarks');
 
+// ... other imports
+const path = require('path');
+
 // Connect to Mongo
 mongoose.connect(
   mongoURI,
@@ -24,6 +27,7 @@ db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 // Middleware
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 app.use(express.urlencoded({ extended: false })); // extended: false - does not allow nested objects in query strings
 app.use(express.json()); // returns middleware that only parses JSON
 
