@@ -3,7 +3,7 @@ import UpdateForm from './UpdateForm';
 const axios = require('axios');
 
 export class Bookmark extends Component {
-  deleteToDo = async (id) => {
+  deleteBookmark = async (id) => {
     try {
       const response = await axios.delete(`/bookmarks/${id}`);
       // console.log(response);
@@ -22,7 +22,7 @@ export class Bookmark extends Component {
       <>
         <h4>
           <span
-            onClick={() => this.deleteToDo(this.props.bookmark._id)}
+            onClick={() => this.deleteBookmark(this.props.bookmark._id)}
             style={this.deleteButtonStyle}
           >
             {' '}
