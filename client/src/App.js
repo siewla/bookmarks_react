@@ -32,16 +32,21 @@ export class App extends Component {
   render() {
     return (
       <>
+        <h1>Bookmarks</h1>
+        <h3>Add a new bookmark</h3>
         <CreateForm fetchdata={this.fetchdata} />
-        {this.state.bookmarks.map((bookmark, index) => {
-          return (
-            <BookMark
-              bookmark={bookmark}
-              key={bookmark._id}
-              fetchdata={this.fetchdata}
-            />
-          );
-        })}
+        <br></br>
+        <div className='bookmarks-container'>
+          {this.state.bookmarks.map((bookmark, index) => {
+            return (
+              <BookMark
+                bookmark={bookmark}
+                key={bookmark._id}
+                fetchdata={this.fetchdata}
+              />
+            );
+          })}
+        </div>
       </>
     );
   }

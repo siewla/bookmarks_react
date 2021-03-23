@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bookmarks-container {
+  min-width: 25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bookmark-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+button[type='submit'] {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: royalblue;
+  color: white;
+  font-weight: bolder;
+}
+
+.edit-button {
+  cursor: pointer;
+  color: teal;
+  background-color: inherit;
+  border: none;
+}
+
+.delete-button {
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+}
+
+.bookmark-container:nth-of-type(2n) {
+  background-color: rgb(230, 141, 141, 0.5);
+}
+
+.bookmark-container:nth-of-type(2n + 1) {
+  background-color: rgb(172, 219, 110, 0.5);
+}

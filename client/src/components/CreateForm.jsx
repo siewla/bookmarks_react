@@ -7,7 +7,7 @@ export class CreateForm extends Component {
 
     this.state = {
       title: '',
-      url: '',
+      url: 'https://',
     };
   }
 
@@ -32,7 +32,7 @@ export class CreateForm extends Component {
     this.createNewData();
     this.setState({
       title: '',
-      url: '',
+      url: 'https://',
     });
   };
 
@@ -44,16 +44,15 @@ export class CreateForm extends Component {
           value={this.state.title}
           onChange={this.handleChange}
           id='title'
-          placeholder='title'
+          placeholder='title e.g. Google'
         />
         <input
           type='text'
           value={this.state.url}
           onChange={this.handleChange}
           id='url'
-          placeholder='url'
         />
-        <input type='submit' />
+        <button type='submit'>Add</button>
       </form>
     );
   }
