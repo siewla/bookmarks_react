@@ -32,8 +32,11 @@ export class App extends Component {
   render() {
     return (
       <>
-        <h1>Bookmarks</h1>
-        <h3>Add a new bookmark</h3>
+        <div className='header-container'>
+          <h1>Bookmarks</h1>
+          <h3>Add a new bookmark</h3>
+        </div>
+
         <CreateForm fetchdata={this.fetchdata} />
         <br></br>
         <div className='bookmarks-container'>

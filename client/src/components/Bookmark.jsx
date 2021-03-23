@@ -23,10 +23,6 @@ export class Bookmark extends Component {
     }
   };
 
-  deleteButtonStyle = {
-    color: 'red',
-  };
-
   toggleEditForm = () => {
     this.setState({ editting: !this.state.editting });
   };
@@ -48,7 +44,6 @@ export class Bookmark extends Component {
             <button
               className='delete-button'
               onClick={() => this.deleteBookmark(this.props.bookmark._id)}
-              style={this.deleteButtonStyle}
             >
               <FontAwesomeIcon icon={faTrashAlt} />
             </button>

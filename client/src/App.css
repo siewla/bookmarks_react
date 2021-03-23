@@ -1,26 +1,43 @@
 body {
-  display: flex;
   text-align: center;
-  justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+}
+
+.header-container {
+  color: royalblue;
+  padding: 0.5rem;
 }
 
 .bookmarks-container {
-  min-width: 25rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bookmark-container {
+  min-width: 25rem;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
+}
+
+.title {
+  text-decoration: none;
+  color: rgb(65, 105, 225, 0.7);
 }
 
 input {
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  border: 0.1rem solid royalblue;
+  color: rgb(65, 105, 225, 0.7);
+}
+
+::placeholder {
+  color: rgb(65, 105, 225, 0.7);
 }
 
 button[type='submit'] {
@@ -30,6 +47,7 @@ button[type='submit'] {
   background-color: royalblue;
   color: white;
   font-weight: bolder;
+  border: none;
 }
 
 .edit-button {
@@ -41,6 +59,7 @@ button[type='submit'] {
 
 .delete-button {
   cursor: pointer;
+  color: rgb(240, 82, 82);
   background-color: inherit;
   border: none;
 }
